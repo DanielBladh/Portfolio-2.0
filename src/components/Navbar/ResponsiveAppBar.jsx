@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-scroll';
 // import useScrollTrigger from '@mui/material/useScrollTrigger'
 
 const pages = [ 'Home', 'About', 'Projects', 'Contact'];
@@ -45,7 +46,7 @@ function ResponsiveAppBar() {
   //   });
 
   return (
-    <AppBar position="static" color='transparent' elevation={1}>
+    <AppBar className='nav' position="static" color='transparent' elevation={1}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography

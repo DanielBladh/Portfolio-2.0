@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .wave {
@@ -25,4 +28,67 @@
   opacity: 0.9;
 }
 
+.techStack {
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
+@media screen and (max-width: 600px) {
+  .techStack img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 107rem;
+  padding: 0 4rem;
+}
+
+.loungepic {
+  border-radius: 1.7rem;
+  height: 20rem;
+  width: 28rem;
+}
+
+.about-content {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+}
+
+.img-side {
+  position: relative;
+  margin-right: 5rem;
+}
+
+.text-side {
+  padding-right: 1.5rem;
+}
+
+.text-side h4 {
+    color: #147efb;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.text-side h3 {
+  color: #2d2e32;
+  font-family: Poppins,sans-serif;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.text-side p {
+  color: #767676;
+  font-family: Mulish,sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}

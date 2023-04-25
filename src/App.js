@@ -5,18 +5,15 @@ import Home from './Pages/Home'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Projects from './Pages/Projects'
+import { Link, Element } from 'react-scroll';
 
 function App() {
   return (
-    <Router>
+    <main>
       <ButtonAppBar />
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route exact path="/About" element={<About/>} />
-        <Route path="Projects" element={<Projects/>} />
-        <Route path="Contact" element={<Contact/>} />
-      </Routes>
-    </Router>
+      <Home />
+      <About />
+    </main>
   );
 }
 
