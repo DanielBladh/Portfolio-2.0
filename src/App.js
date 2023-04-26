@@ -1,19 +1,26 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ButtonAppBar from "./components/Navbar/ResponsiveAppBar";
-import Home from './Pages/Home'
-import About from './Pages/About'
-import Contact from './Pages/Contact'
-import Projects from './Pages/Projects'
-import { Link, Element } from 'react-scroll';
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Projects from "./Pages/Projects"
+
 
 function App() {
   return (
-    <main>
-      <ButtonAppBar />
+    <>
+    <ButtonAppBar />
       <Home />
       <About />
-    </main>
+      <Projects />
+    </>
+    // <Router>
+    //   <Routes>
+    //     <Route path="/" element={<Home/>} />
+    //     <Route path="/About" element={<About/>} />
+    //     <Route path="Projects" element={<Projects/>} />
+    //     <Route path="Contact" element={<Contact/>} />
+    //   </Routes>
+    // </Router>
   );
 }
 
