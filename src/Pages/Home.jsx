@@ -76,6 +76,7 @@ const Home = () => {
           </Box>
           <Box className="hero-img" display="flex" alignItems="center" ml={1}>
             <Avatar
+              className="profilepicture"
               alt="image-of-me"
               src={ProfilePic}
               sx={{ width: 350, height: 350 }}

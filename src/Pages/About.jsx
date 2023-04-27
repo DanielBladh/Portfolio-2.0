@@ -4,7 +4,6 @@ import { Typography, Box, Container } from "@mui/material";
 
 function About() {
   return (
-    <>
       <Container maxWidth="lg">
         <Box
           className="hero-main"
@@ -44,30 +43,6 @@ function About() {
           </Box>
         </Box>
       </Container>
-      {/* <Box 
-    className="about-content"
-     maxHeight={400}
-     display="flex"
-     flexDirection="row"
-     justifyContent="center"
-     alignItems="flex-start"
-     flex={1}
-     backgroundColor="blue"
-     >
-      <Box
-        className="about-img"
-        component="img"
-        src={loungepic}
-        alt="lounge-picture"
-        height="22rem"
-        width="30rem"
-      />
-      <Typography variant="h5">About me</Typography>
-      <Typography variant="h4">
-        A dedicated Front-end Developer based in Sthlm, Sweden
-      </Typography>
-      </Box> */}
-    </>
   );
 }
 
