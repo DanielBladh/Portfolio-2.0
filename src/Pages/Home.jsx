@@ -11,7 +11,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Home = () => {
   return (
-    <Container maxWidth="lg" sx={{ backgroundColor: "rgb(252,252,252)",}}>
+    <Container maxWidth="lg" sx={{ backgroundColor: "rgb(252,252,252)" }}>
       <Box
         display="flex"
         justifyContent="center"
@@ -34,10 +34,10 @@ const Home = () => {
             flexDirection="column"
             flex="1"
           >
-            <Typography variant="h2" sx={{ fontFamily: "Poppins, sans-serif"}}>
+            <Typography variant="h2" sx={{ fontFamily: "Poppins, sans-serif" }}>
               Front-End Developer<span className="wave">👋🏻</span>
             </Typography>
-            <Typography sx={{ fontFamily: "Poppins, sans-serif"}}>
+            <Typography sx={{ fontFamily: "Poppins, sans-serif" }}>
               Hi, I'm Daniel Bladh. A passionate Front-end Developer based in
               Stockholm, Sweden<span className="pin">📍</span> <br /> <br />
               Well-organised person, problem solver, independent employee with
@@ -45,10 +45,16 @@ const Home = () => {
               Fan of sports, outdoor activities, TV series and gaming.
             </Typography>
             <Box className="social-links">
-              <IconButton href="https://www.linkedin.com/in/daniel-bladh-stenberg/" sx={{ color: "black" }}>
+              <IconButton
+                href="https://www.linkedin.com/in/daniel-bladh-stenberg/"
+                sx={{ color: "black" }}
+              >
                 <LinkedInIcon />
               </IconButton>
-              <IconButton href="https://github.com/DanielBladh" sx={{ color: "black" }}>
+              <IconButton
+                href="https://github.com/DanielBladh"
+                sx={{ color: "black" }}
+              >
                 <GitHubIcon />
               </IconButton>
             </Box>
@@ -56,15 +62,16 @@ const Home = () => {
               className="tech-stack"
               display="flex"
               alignItems="center"
+              gap="1.5rem"
               mt={8}
             >
               <Typography sx={{ fontWeight: "bold" }}>TECH STACK |</Typography>
-              <img src={html5} alt="html5-icon" />
-              <img src={css3} alt="css3-icon" />
-              <img src={javascript} alt="javascript-icon" />
-              <img src={react} alt="react-icon" />
-              <img src={vue} alt="vue-icon" />
-              <img src={nodejs} alt="nodejs-icon" />
+              <img src={html5} alt="html5-icon" title="HTML5" />
+              <img src={css3} alt="css3-icon" title="CSS3" />
+              <img src={javascript} alt="javascript-icon" title="JavaScript" />
+              <img src={react} alt="react-icon" title="React" />
+              <img src={vue} alt="vue-icon" title="Vue.js" />
+              <img src={nodejs} alt="nodejs-icon" title="Node.js" />
             </Box>
           </Box>
           <Box className="hero-img" display="flex" alignItems="center" ml={1}>

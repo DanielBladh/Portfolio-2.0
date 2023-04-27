@@ -20,7 +20,7 @@ const Contact = () => {
         </Box>
         <Box className="contact-icon-box" sx={{ display: "flex", alignItems: "center", gap: "1.5rem"}}>
           <span>
-            <Link><FaEnvelopeSquare /></Link>
+            <Link href="mailto: danielbladh92@gmail.com"><FaEnvelopeSquare className="wiggle"/></Link>
           </span>
           <Box className="contact-info" sx={{ display: "flex", flexDirection: "column", gap: "0.5rem"}}>
             <Typography variant="h5">Mail</Typography>
