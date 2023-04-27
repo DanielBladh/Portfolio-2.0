@@ -45,10 +45,10 @@ const Home = () => {
               Fan of sports, outdoor activities, TV series and gaming.
             </Typography>
             <Box className="social-links">
-              <IconButton sx={{ color: "black" }}>
+              <IconButton href="https://www.linkedin.com/in/daniel-bladh-stenberg/" sx={{ color: "black" }}>
                 <LinkedInIcon />
               </IconButton>
-              <IconButton sx={{ color: "black" }}>
+              <IconButton href="https://github.com/DanielBladh" sx={{ color: "black" }}>
                 <GitHubIcon />
               </IconButton>
             </Box>

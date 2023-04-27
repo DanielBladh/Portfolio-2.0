@@ -3,6 +3,8 @@ import ButtonAppBar from "./components/Navbar/ResponsiveAppBar";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects"
+import Contact from "./Pages/Contact";
+import Footer from "./components/Navbar/Footer"
 
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
       <Home />
       <About />
       <Projects />
+      <Contact />
+      <Footer />
     </>
     // <Router>
     //   <Routes>

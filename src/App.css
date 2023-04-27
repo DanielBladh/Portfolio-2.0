@@ -53,3 +53,19 @@
   flex-direction: row;
   
 }
+
+.contact-icon-box span {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  padding: 1rem;
+}
+
+.contact-icon-box span a {
+  font-size: 3rem;
+}
+
+.footer-socials a {
+  color: #fff;
+  font-size: 2.3rem;
+}
