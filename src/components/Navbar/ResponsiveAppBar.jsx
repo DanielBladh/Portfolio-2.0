@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-// import useScrollTrigger from '@mui/material/useScrollTrigger'
+import { Link } from "react-scroll";
 
 const pages = [ 'Home', 'About', 'Projects', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -35,17 +35,8 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
-  // function HideOnScroll(props) {
-  //   const { children, window } = props;
-  //   // Note that you normally won't need to set the window ref as useScrollTrigger
-  //   // will default to window.
-  //   // This is only being set here because the demo is in an iframe.
-  //   const trigger = useScrollTrigger({
-  //     target: window ? window() : undefined,
-  //   });
-
   return (
-    <AppBar className='nav' position="static" color='transparent' elevation={1}>
+    <AppBar className='nav' position="fixed" elevation={2}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -124,13 +115,25 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <Link
                 key={page}
+                to={page.toLowerCase()}
+                smooth={true}
+                duration={500}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', fontWeight: 600 }}
+                style={{ textDecoration: 'none' }}
               >
-                {page}
-              </Button>
+                <Button
+                  sx={{
+                    my: 2,
+                    color: 'black',
+                    display: 'block',
+                    fontWeight: 600,
+                  }}
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
 

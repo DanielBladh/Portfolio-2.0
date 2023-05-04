@@ -8,43 +8,44 @@ import nodejs from "../assets/nodejs.svg";
 import javascript from "../assets/javascript.svg";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import WaveAnimation from "../components/Animations/WaveAnimation/WaveComponent";
 
 const Home = () => {
   return (
-    <Container maxWidth="lg" sx={{ backgroundColor: "rgb(252,252,252)" }}>
+    <Container maxWidth="100h" sx={{ backgroundColor: "rgb(252,252,252)" }}>
       <Box
+        className="home-content"
         display="flex"
         justifyContent="center"
-        alignItems="center"
         minHeight="100vh"
+        minWidth="100vh"
         flexDirection="column"
       >
         <Box
           className="hero-main"
           display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          alignItems="flex-start"
-          flex="1"
-          maxHeight={400}
-        >
+          flexDirection={{ xs: "column", md: "row" }}
+          alignItems={{ xs: "center", md: "flex-start" }}
+          justifyContent={{ xs: "center" }}
+          gap="1rem"
+          padding={{ xs: "2rem", md: "4rem" }}        >
           <Box
-            className="hero-text"
             display="flex"
             flexDirection="column"
-            flex="1"
+            alignItems={{ xs: "center", md: "flex-start" }}
+            textAlign={{ xs: "center", md: "left" }}
           >
-            <Typography variant="h2" sx={{ fontFamily: "Poppins, sans-serif" }}>
-              Front-End Developer<span className="wave">👋🏻</span>
-            </Typography>
-            <Typography sx={{ fontFamily: "Poppins, sans-serif" }}>
+            <WaveAnimation />
+            <Typography
+              sx={{ fontFamily: "Poppins, sans-serif", maxWidth: "46.650rem" }}
+            >
               Hi, I'm Daniel Bladh. A passionate Front-end Developer based in
-              Stockholm, Sweden<span className="pin">📍</span> <br /> <br />
+              Stockholm, Sweden<span className="pin"> 📍</span> <br /> <br />
               Well-organised person, problem solver, independent employee with
               high attention to detail. <br />
               Fan of sports, outdoor activities, TV series and gaming.
             </Typography>
-            <Box className="social-links">
+            <Box className="social-links" sx={{ marginTop: "1rem" }}>
               <IconButton
                 href="https://www.linkedin.com/in/daniel-bladh-stenberg/"
                 sx={{ color: "black" }}
@@ -57,24 +58,31 @@ const Home = () => {
               >
                 <GitHubIcon />
               </IconButton>
-            </Box>
-            <Box
-              className="tech-stack"
-              display="flex"
-              alignItems="center"
-              gap="1.5rem"
-              mt={8}
-            >
-              <Typography sx={{ fontWeight: "bold" }}>TECH STACK |</Typography>
-              <img src={html5} alt="html5-icon" title="HTML5" />
-              <img src={css3} alt="css3-icon" title="CSS3" />
-              <img src={javascript} alt="javascript-icon" title="JavaScript" />
-              <img src={react} alt="react-icon" title="React" />
-              <img src={vue} alt="vue-icon" title="Vue.js" />
-              <img src={nodejs} alt="nodejs-icon" title="Node.js" />
+              <Box
+                className="tech-stack"
+                display="flex"
+                alignItems="center"
+                gap="1.5rem"
+                mt={{ xs: "2rem", md: "8rem" }}
+                marginLeft={{ md: "2rem" }}
+              >
+                <Typography sx={{ fontWeight: "bold" }}>
+                  TECH STACK |
+                </Typography>
+                <img src={html5} alt="html5-icon" title="HTML5" />
+                <img src={css3} alt="css3-icon" title="CSS3" />
+                <img
+                  src={javascript}
+                  alt="javascript-icon"
+                  title="JavaScript"
+                />
+                <img src={react} alt="react-icon" title="React" />
+                <img src={vue} alt="vue-icon" title="Vue.js" />
+                <img src={nodejs} alt="nodejs-icon" title="Node.js" />
+              </Box>
             </Box>
           </Box>
-          <Box className="hero-img" display="flex" alignItems="center" ml={1}>
+          <Box className="hero-img" display="flex" marginTop={{xs: "2rem"}}>
             <Avatar
               className="profilepicture"
               alt="image-of-me"
