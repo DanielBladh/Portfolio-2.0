@@ -5,7 +5,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
-import Footer from "./components/Navbar/Footer";
+import Footer from "./components/Footer/Footer";
 import { Element } from "react-scroll";
 
 function App() {

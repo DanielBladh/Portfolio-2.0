@@ -4,6 +4,8 @@ import react from "../assets/react.svg";
 import css3 from "../assets/css3.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import projectOne from "../assets/Hammarbyfotboll.png";
+import MediaCard from "../components/Core/MediaCard";
 
 const Projects = () => {
   const [name, setName] = useState("");
@@ -50,7 +52,7 @@ const Projects = () => {
     {
       title: "Project 1",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "https://picsum.photos/200",
+      image: { projectOne },
       link: "#",
     },
     {
@@ -72,6 +74,11 @@ const Projects = () => {
       >
         <Typography variant="h5">Portfolio</Typography>
         <Typography variant="h4">My projects are under development</Typography>
+        <Box sx={{ display: "flex", flexDirection: "row", gap: "2rem"}}>
+        <MediaCard sx={{ height: 140 }} image={projectOne} title="Image" />
+        <MediaCard sx={{ height: 140 }} image={projectOne} title="Image" />
+        <MediaCard sx={{ height: 140 }} image={projectOne} title="Image" />
+        </Box>
         <Box
           className="about-main"
           display="flex"
@@ -95,7 +102,7 @@ const Projects = () => {
               fontFamily="Poppins, sans-serif"
               fontWeight="bold"
             >
-              CAR RENTAL 🚗
+              Hammarby Fotboll
             </Typography>
             <Typography
               maxWidth="30rem"
@@ -141,7 +148,7 @@ const Projects = () => {
           </Box>
           <Box
             component="img"
-            src="https://picsum.photos/200"
+            src={projectOne}
             display="flex"
             sx={{
               width: 410,
