@@ -14,7 +14,7 @@ const Contact = () => {
   };
 
   return (
-    <Container className="contact-content" maxWidth="lg">
+    <Container className="contact-container" maxWidth="lg">
       <Box className="contact-title">
         <Typography variant="h5" color="#147efb" fontWeight="bold">
           Contact

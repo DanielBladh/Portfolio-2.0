@@ -64,9 +64,9 @@ const Projects = () => {
   ];
 
   return (
-    <Container maxWidth="100vh" sx={{ backgroundColor: "rgb(252,252,252)" }}>
+    <Container className="projects-container" maxWidth="100%" sx={{ backgroundColor: "rgb(252,252,252)" }}>
       <Box
-        className="hero-main"
+        className="projects-main"
         display="flex"
         flexDirection="column"
         justifyContent="center"
@@ -80,14 +80,14 @@ const Projects = () => {
         <MediaCard sx={{ height: 140 }} image={projectOne} title="Image" />
         </Box>
         <Box
-          className="about-main"
+          className="projects-main"
           display="flex"
           flexDirection="row"
           justifyContent="center"
           gap="1rem"
         >
           <Box
-            className="project-text"
+            className="projects-text"
             sx={{
               display: "flex",
               flexDirection: "column",
@@ -118,7 +118,7 @@ const Projects = () => {
               <img src={css3} alt="css3-icon" title="CSS3" />
             </Box>
             <Box
-              className="project-links"
+              className="projects-links"
               sx={{
                 display: "flex",
                 alignItems: "center",

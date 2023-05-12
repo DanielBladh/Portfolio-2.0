@@ -4,7 +4,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
     return ( 
-        <Container maxWidth sx={{ backgroundColor: "#2d2e32", padding: "3rem 0",}}>
+        <Container maxWidth="100%" sx={{ backgroundColor: "#2d2e32", padding: "3rem 0",}}>
 
             <Box sx={{ margin: "0 auto", padding: "0 4rem"}}>
                 <Box className="footer-info" sx={{ display: "flex", alignItems: "center", justifyContent: "space-between"}}>

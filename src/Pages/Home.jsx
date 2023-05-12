@@ -12,17 +12,17 @@ import WaveAnimation from "../components/Animations/WaveAnimation/WaveComponent"
 
 const Home = () => {
   return (
-    <Container maxWidth="100h" sx={{ backgroundColor: "rgb(252,252,252)" }}>
+    <Container className="home-container" maxWidth="100%" sx={{ backgroundColor: "rgb(252,252,252)" }}>
       <Box
         className="home-content"
         display="flex"
         justifyContent="center"
         minHeight="100vh"
-        minWidth="100vh"
+        minWidth="100%"
         flexDirection="column"
       >
         <Box
-          className="hero-main"
+          className="home-main"
           display="flex"
           flexDirection={{ xs: "column", md: "row" }}
           alignItems={{ xs: "center", md: "flex-start" }}
@@ -30,6 +30,7 @@ const Home = () => {
           gap="1rem"
           padding={{ xs: "2rem", md: "4rem" }}        >
           <Box
+            className="home-text-left"
             display="flex"
             flexDirection="column"
             alignItems={{ xs: "center", md: "flex-start" }}
@@ -82,7 +83,7 @@ const Home = () => {
               </Box>
             </Box>
           </Box>
-          <Box className="hero-img" display="flex" marginTop={{xs: "2rem"}}>
+          <Box className="home-profile-img" display="flex" marginTop={{xs: "2rem"}}>
             <Avatar
               className="profilepicture"
               alt="image-of-me"

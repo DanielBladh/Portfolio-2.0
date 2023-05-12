@@ -7,9 +7,6 @@
   padding: 0;
 }
 
-.App {
-}
-
 .about, .projects {
   padding: 10rem 0;
 }
@@ -25,13 +22,6 @@
 .tech-stack {
   flex-wrap: wrap;
   max-width: 600px;
-}
-
-@media screen and (max-width: 900px) {
-  .tech-stack img {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 .contact-icon-box span {
@@ -102,5 +92,41 @@
   }
   40%, 100% {
     transform: rotateZ(0);
+  }
+}
+
+/* MEDIA SCREENS */
+
+@media screen and (max-width: 1070) {
+  .about-main {
+    width: 410px;
+    height: 350px;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .tech-stack img {
+    width: 30px;
+    height: 30px;
+  }
+  .about-text {
+    max-width: 40rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-main {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 600) {
+  .home-content {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 0;
+    text-align: center;
   }
 }
