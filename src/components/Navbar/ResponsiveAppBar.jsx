@@ -37,7 +37,10 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar className="nav" position="fixed" elevation={2}>
+    <AppBar className="nav" position="fixed" elevation={2}   sx={{
+      backgroundColor: 'white',
+      backdropFilter: 'blur(10px)', // Optional: Add a blur effect
+    }}>
       <Container maxWidth="100%">
         <Toolbar disableGutters>
           <Typography
@@ -65,7 +68,7 @@ function ResponsiveAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              color="black"
             >
               <MenuIcon />
             </IconButton>
