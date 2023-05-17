@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import react from "../assets/react.svg";
 import css3 from "../assets/css3.svg";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import projectOne from "../assets/Hammarbyfotboll.png";
-import MediaCard from "../components/Core/MediaCard";
+import bajenDevice from "../assets/bajenDevice.png";
+import GeochTaDevice from "../assets/GeochTaDevice.png";
+import bollDevice from "../assets/BollDevice.png";
 
 const Projects = () => {
   const [name, setName] = useState("");
@@ -38,18 +38,6 @@ const Projects = () => {
       })
       .catch(setError("Could not fetch from Github API Users."));
   };
-  // const requestUserRepoAsync = async () => {
-  //   await fetch("https://api.github.com/users/DanielBladh/repos")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       data.filter((x) => {
-  //         x.name != ""
-  //       })
-  //       console.log(data);
-  //       setRepos(data);
-  //     })
-  //     .catch(setError("Could not data from Github API Repos."));
-  // };
 
   const requestUserRepoAsync = async () => {
     try {
@@ -64,7 +52,7 @@ const Projects = () => {
         "hapi-server",
         "my-portfolio",
         "js1-gruppinl-mning",
-      ]; // Add the names of the repos you want to exclude
+      ];
 
       data = data.filter(
         (repo) => !excludedRepos.includes(repo.name.toLowerCase())
@@ -78,40 +66,51 @@ const Projects = () => {
     }
   };
 
-  const projects = [
-    {
-      title: "Project 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: { projectOne },
-      link: "#",
-    },
-    {
-      title: "Project 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      image: "https://picsum.photos/200",
-      link: "#",
-    },
-  ];
-
   return (
-    <Container
-      className="projects-container"
-      maxWidth="100%"
-      sx={{ backgroundColor: "rgb(252,252,252)" }}
+    <Box
+      sx={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        backgroundColor: "rgb(252,252,252)",
+      }}
     >
-      <Typography variant="h5">Portfolio</Typography>
-      <Typography variant="h4">My projects are under development</Typography>
-      {repos.map((repo, index) => {
-        return (
-          <div key={index}>
+      <Container maxWidth="lg" sx={{ width: "65%", padding: "2.5rem 0" }}>
+        <Typography variant="h5" color="#147efb" fontWeight="bold">
+          Portfolio
+        </Typography>
+        <Typography variant="h4">My projects are under development</Typography>
+        {repos.map((repo, index) => {
+          const isEven = index % 2 === 0;
+          let projectImage;
+          if (repo.name === "HammarbyFotboll") {
+            projectImage = bajenDevice;
+          } else if (repo.name === "Ge-och-Ta") {
+            projectImage = GeochTaDevice;
+          } else if (repo.name === "Boll-Webshop") {
+            projectImage = bollDevice;
+          }
+          return (
             <Box
+              key={index}
               className="projects-main"
-              display="flex"
-              flexDirection="row"
-              justifyContent="center"
-              gap="1rem"
-              padding="4rem 0"
-              boxShadow="0 0 10px rgba(0,0,0,.1)"
+              sx={{
+                display: "flex",
+                flexDirection: isEven ? "row" : "row-reverse",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "1rem",
+                paddingBottom: "3rem",
+                maxWidth: "1000px",
+                margin: "3rem auto",
+                borderRadius: "20px",
+                boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 5px",
+                flexWrap: "wrap",
+                [`@media (max-width: 900px)`]: {
+                  flexDirection: "column",
+                  textAlign: "center",
+                },
+              }}
             >
               <Box
                 className="projects-text"
@@ -121,7 +120,8 @@ const Projects = () => {
                   justifyContent: "center",
                   textAlign: "center",
                   height: "auto",
-                  width: "30rem",
+                  flex: 1,
+                  alignItems: "center", 
                 }}
               >
                 <Typography
@@ -157,34 +157,147 @@ const Projects = () => {
                       <GitHubIcon />
                     </IconButton>
                   </Typography>
-                  {/* <Typography fontWeight="bold">
-                DEMO
-                <IconButton
-                  href="https://www.linkedin.com/in/daniel-bladh-stenberg/"
-                  sx={{ color: "black" }}
-                >
-                  <LinkedInIcon />
-                </IconButton>
-              </Typography> */}
                 </Box>
               </Box>
+
               <Box
                 component="img"
-                src={projectOne}
-                display="flex"
+                src={projectImage}
+                className="projects-image"
                 sx={{
-                  width: 410,
-                  height: 350,
+                  width: "350px",
+                  height: "300px",
                   borderRadius: "20px",
-                  objectFit: "fill",
+                  objectFit: "contain",
                 }}
-              ></Box>
+              />
             </Box>
-          </div>
-        );
-      })}
-    </Container>
+          );
+        })}
+      </Container>
+    </Box>
   );
 };
 
 export default Projects;
+
+//   return (
+//     <Container
+//       className="projects-container"
+//       maxWidth="100%"
+//       display="flex"
+//       sx={{ backgroundColor: "rgb(252,252,252)" }}
+//     >
+//       <Box
+//         width="md"
+//         display="flex"
+//         flexDirection="column"
+//         justifyContent="center"
+//         alignItems="center"
+//       >
+//         <Box
+//           minWidth="1000px"
+//           display="flex"
+//           alignItems="flex-start"
+//           flexDirection="column"
+//           maxWidth="1000px"
+//           paddingBottom="2.5rem"
+//         >
+//           <Typography variant="h5" color="#147efb" fontWeight="bold">
+//             Portfolio
+//           </Typography>
+//           <Typography variant="h4">
+//             My projects are under development
+//           </Typography>
+//         </Box>
+//         {repos.map((repo, index) => {
+//           const isEven = index % 2 === 0;
+
+//           let projectImage;
+//           if (repo.name === "HammarbyFotboll") {
+//             projectImage = bajenDevice;
+//           } else if (repo.name === "Ge-och-Ta") {
+//             projectImage = GeochTaDevice;
+//           } else if (repo.name === "Boll-Webshop") {
+//             projectImage = bollDevice;
+//           }
+//           return (
+//             <div key={index}>
+//               <Box
+//                 className="projects-main"
+//                 display="flex"
+//                 flexDirection={{ xs: "column", sm: "row" }} // Added responsive flex-direction
+//                 justifyContent="center"
+//                 alignItems="center"
+//                 gap="1rem"
+//                 paddingBottom="5rem"
+//                 maxWidth="1000px"
+//                 margin="0 auto"
+//               >
+//                 <Box
+//                   className="projects-text"
+//                   sx={{
+//                     display: "flex",
+//                     flexDirection: "column",
+//                     justifyContent: "center",
+//                     textAlign: "center",
+//                     height: "auto",
+//                     width: { xs: "100%", sm: "30rem" }, // Added responsive width
+//                     order: isEven ? 0 : 1,
+//                   }}
+//                 >
+//                   <Typography
+//                     variant="h5"
+//                     fontFamily="Poppins, sans-serif"
+//                     fontWeight="bold"
+//                   >
+//                     {repo.name}
+//                   </Typography>
+//                   <Typography
+//                     maxWidth="30rem"
+//                     fontFamily="Poppins, sans-serif"
+//                     color="#767676"
+//                   >
+//                     {repo.description}
+//                   </Typography>
+//                   <Box className="project-stack" padding="2rem">
+//                     <img src={react} alt="react-icon" title="React" />
+//                     <img src={css3} alt="css3-icon" title="CSS3" />
+//                   </Box>
+//                   <Box
+//                     className="projects-links"
+//                     sx={{
+//                       display: "flex",
+//                       alignItems: "center",
+//                       justifyContent: "center",
+//                       gap: "1rem",
+//                     }}
+//                   >
+//                     <Typography fontWeight="bold">
+//                       CODE
+//                       <IconButton href={repo.html_url} sx={{ color: "black" }}>
+//                         <GitHubIcon />
+//                       </IconButton>
+//                     </Typography>
+//                   </Box>
+//                 </Box>
+//                 <Box
+//                   component="img"
+//                   src={projectImage}
+//                   display="flex"
+//                   sx={{
+//                     width: { xs: "100%", sm: 410 }, // Added responsive width
+//                     height: { xs: "auto", sm: 300 }, // Added responsive height
+//                     borderRadius: "20px",
+//                     objectFit: "fill",
+//                     order: isEven ? 1 : 0,
+//                   }}
+//                 />
+//               </Box>
+//             </div>
+//           );
+//         })}
+//       </Box>
+//     </Container>
+//   );
+// };
