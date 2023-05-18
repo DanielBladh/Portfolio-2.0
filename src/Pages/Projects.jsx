@@ -52,6 +52,7 @@ const Projects = () => {
         "hapi-server",
         "my-portfolio",
         "js1-gruppinl-mning",
+        "danielbladh.github.io"
       ];
 
       data = data.filter(
