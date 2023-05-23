@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Portfolio-2.0/static/css/main.6107deee.css",
+    "main.js": "/Portfolio-2.0/static/js/main.675b3301.js",
+    "static/media/bajenDevice.png": "/Portfolio-2.0/static/media/bajenDevice.a7554013d710d705c8d1.png",
+    "static/media/GeochTaDevice.png": "/Portfolio-2.0/static/media/GeochTaDevice.617b3a2383b270d18bf3.png",
+    "static/media/BollDevice.png": "/Portfolio-2.0/static/media/BollDevice.19a899ec7ec78a3414d7.png",
+    "static/media/Profilepic2.png": "/Portfolio-2.0/static/media/Profilepic2.d365ed4792052f354766.png",
+    "static/media/loungepic.jpg": "/Portfolio-2.0/static/media/loungepic.c056453d4ce283670519.jpg",
+    "static/media/Daniel1.jpg": "/Portfolio-2.0/static/media/Daniel1.0d38477b803b352ceb5a.jpg",
+    "static/media/react.svg": "/Portfolio-2.0/static/media/react.ad7e5df9509873eb4f00a635eea63914.svg",
+    "static/media/nodejs.svg": "/Portfolio-2.0/static/media/nodejs.cccdafa931eebdaea49f5c5ac3ba232f.svg",
+    "static/media/javascript.svg": "/Portfolio-2.0/static/media/javascript.34cd9860149518f3e4ecc21a4b50efae.svg",
+    "index.html": "/Portfolio-2.0/index.html",
+    "static/media/css3.svg": "/Portfolio-2.0/static/media/css3.3ec320225ef851ed26cf9fd1c6ebaa54.svg",
+    "static/media/html5.svg": "/Portfolio-2.0/static/media/html5.c1bb84e022ca9d76984d4b943bd678fd.svg",
+    "static/media/vue.svg": "/Portfolio-2.0/static/media/vue.794e612aa9ab0124da8efae55eef549a.svg",
+    "main.6107deee.css.map": "/Portfolio-2.0/static/css/main.6107deee.css.map",
+    "main.675b3301.js.map": "/Portfolio-2.0/static/js/main.675b3301.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6107deee.css",
+    "static/js/main.675b3301.js"
+  ]
+}
